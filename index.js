@@ -52,7 +52,7 @@ app.get('/coolEmo', function(request, response){
 });
 
 app.get('/directory', function (request, response){
-    
+    response.send("GET OK"); 
 });
 
 app.post('/directory', function(request, response){
