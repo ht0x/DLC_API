@@ -1,0 +1,27 @@
+{
+  "name": "dlc_api",
+  "version": "1.0.0",
+  "description": "17-4-2017",
+  "main": "index.js",
+  "scripts": {
+    "starts": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhtri90/DLC_API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huynhtri90/DLC_API/issues"
+  },
+  "homepage": "https://github.com/huynhtri90/DLC_API#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": "6.10.2"
+  }
+}
