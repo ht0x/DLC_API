@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 5000));
 
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function(error, database){
+mongodb.MongoClient.connect(process.env.MONGOLAB_URI, function(error, database){
    if (error)
    {
        console.log(error);
@@ -35,6 +35,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function(error, database){
         "DLC_SERVER_URL": <string>
     }
 */
+
 
 function handleError(response, reason, message, code)
 {
