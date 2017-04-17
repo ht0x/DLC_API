@@ -2,9 +2,9 @@
   "name": "dlc_api",
   "version": "1.0.0",
   "description": "17-4-2017",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "starts": "node server.js",
+    "starts": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
