@@ -8,8 +8,8 @@ var DLC_Info = "DLC_INFO";
 var db;
 
 app.use(bodyParser.json());
-
 app.set('port', (process.env.PORT || 5000));
+app.use(bodyParser.urlencoded());
 
 mongodb.MongoClient.connect(process.env.MONGOLAB_URI, function(error, database){
    if (error)
@@ -56,20 +56,20 @@ app.get('/directory', function (request, response){
 });
 
 app.post('/directory', function(request, response){
-    var newDLCInfo = response.body;
-    
-    if (!newDLCInfo.DLC_VERION){
+    var newDLCInfo = request.body;
+    console.log(request.body);
+    if (!newDLCInfo.DLC_VERSION){
             handleError(response, "Invalid DLC Version", "Must provide a DLC version", 400);
         }
     else 
         {
-            db.collection(DLC_Info).insertOne(newDLCInfo, function(error, response){
+            db.collection(DLC_Info).insertOne(newDLCInfo, function(error, res){
                 if (error)
                     {
                         handleError(response, error.message, "Failed to create new DLC Info");
                     }
                 else 
-                    res.status(201).json(response.ops[0]);
+                    response.status(201).json(res.ops[0]);
             })
         }
 });
